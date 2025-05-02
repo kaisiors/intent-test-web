@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intent Test</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 50px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Intent URL Test</h1>
+  <p>Click the button below to trigger an intent:// link.</p>
+  <button onclick="triggerIntent()">Open App via Intent</button>
+
+  <script>
+    function triggerIntent() {
+      // Intent URL with fallback
+      const intentUrl = "intent://transport/otw?country_code=ID#Intent;scheme=gojek;package=com.gojek.app.staging;";
+      window.location.href = intentUrl;
+    }
+  </script>
+</body>
+</html>
